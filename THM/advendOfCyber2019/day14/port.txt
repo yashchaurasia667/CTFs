@@ -1,0 +1,1 @@
+# Nmap 7.94SVN scan initiated Thu Feb 22 05:53:59 2024 as: nmap -sV -A -T4 -Pn -p- -oN port.txt -vvv 10.10.210.174

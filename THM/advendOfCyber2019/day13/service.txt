@@ -1,0 +1,83 @@
+# Nmap 7.94SVN scan initiated Tue Feb 20 11:50:21 2024 as: nmap -sSCV -A -Pn -T4 -oN service.txt 10.10.229.120
+Nmap scan report for 10.10.229.120
+Host is up (0.17s latency).
+Scanned at 2024-02-20 11:50:21 EST for 38s
+Not shown: 998 filtered tcp ports (no-response)
+PORT     STATE SERVICE       VERSION
+80/tcp   open  http          Microsoft IIS httpd 10.0
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-server-header: Microsoft-IIS/10.0
+|_http-title: IIS Windows Server
+3389/tcp open  ms-wbt-server Microsoft Terminal Services
+| rdp-ntlm-info: 
+|   Target_Name: RETROWEB
+|   NetBIOS_Domain_Name: RETROWEB
+|   NetBIOS_Computer_Name: RETROWEB
+|   DNS_Domain_Name: RetroWeb
+|   DNS_Computer_Name: RetroWeb
+|   Product_Version: 10.0.14393
+|_  System_Time: 2024-02-20T16:50:57+00:00
+|_ssl-date: 2024-02-20T16:51:01+00:00; +3s from scanner time.
+| ssl-cert: Subject: commonName=RetroWeb
+| Issuer: commonName=RetroWeb
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2024-02-19T16:49:09
+| Not valid after:  2024-08-20T16:49:09
+| MD5:   d009:0ff8:c5e4:0d8d:2605:6951:2f89:9c26
+| SHA-1: dbc3:0385:0cd0:cf3e:b07c:2867:640d:4a9f:f0eb:76b3
+| -----BEGIN CERTIFICATE-----
+| MIIC1DCCAbygAwIBAgIQffZnLjhnobFCrkxPeIad7DANBgkqhkiG9w0BAQsFADAT
+| MREwDwYDVQQDEwhSZXRyb1dlYjAeFw0yNDAyMTkxNjQ5MDlaFw0yNDA4MjAxNjQ5
+| MDlaMBMxETAPBgNVBAMTCFJldHJvV2ViMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A
+| MIIBCgKCAQEAu/F6JrE2I9jVatR3bWYvnf74O/4tviIEvr0v4TLu+fIzcknmXIka
+| 1xfPrLxixxlnMiABwuH56LoTHbDrT4rvT6jTI1dUrxJVkOGz5by/Q6Udd9PU0Qmw
+| eXxEvZaM4fUp3NIBPB2EZUqC8wyQWxdz0uuGgUVRYiTxJQv6144pTves8VGVFbKW
+| vZSDzyGphgAJ1mLVBcYMC1Gwo0kiHmDedwF7Auq4SM3i4vAKAXY6f/kksV/3TvkL
+| +GILJClDmgIONaev47nU9+gh1YSKbh2nVdP4PhiIIqscXryRcUrOlIE5jJutgC26
+| 3FBB+b/Usywo2NRoEgJhn4P/5c5VbOnGuQIDAQABoyQwIjATBgNVHSUEDDAKBggr
+| BgEFBQcDATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcNAQELBQADggEBAJPuzTLQogDt
+| Reefa4AAe0wqKAL6cZ74SCd1QiotIjuGTIod4AX/pm8I6CJ4A8YSkaFk9NxVzpW7
+| AJllGSmyQKduSNYI0gaxariwviV+xyjDIXHjebEbhdJib2yGRageqwlAkivWZBKJ
+| ufI0jmjuxu512zqHnOXKBkeBFHQn1HkTus0KV8GmOlkXzTNy7S3x6mAb9iF3uIZO
+| 8abDr2lQsBXo/WE8liLs9TgqdeErp/kzTqKnGkOLOpeAvbGBfmDjAHfHYUtMfs69
+| oOrFWszhE0B9cFqe6T7F91v4XqKlwJ/1FdijY2XuXpfVBViajqklvxbIzod/0J4Q
+| tTkypymb9as=
+|_-----END CERTIFICATE-----
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+OS fingerprint not ideal because: Missing a closed TCP port so results incomplete
+No OS matches for host
+TCP/IP fingerprint:
+SCAN(V=7.94SVN%E=4%D=2/20%OT=80%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=65D4D873%P=x86_64-pc-linux-gnu)
+SEQ(SP=106%GCD=1%ISR=109%TI=I%TS=A)
+SEQ(SP=107%GCD=1%ISR=10A%TI=I%TS=A)
+OPS(O1=M508NW8ST11%O2=M508NW8ST11%O3=M508NW8NNT11%O4=M508NW8ST11%O5=M508NW8ST11%O6=M508ST11)
+WIN(W1=2000%W2=2000%W3=2000%W4=2000%W5=2000%W6=2000)
+ECN(R=Y%DF=Y%TG=80%W=2000%O=M508NW8NNS%CC=Y%Q=)
+T1(R=Y%DF=Y%TG=80%S=O%A=S+%F=AS%RD=0%Q=)
+T2(R=N)
+T3(R=N)
+T4(R=N)
+U1(R=N)
+IE(R=N)
+
+Uptime guess: 0.002 days (since Tue Feb 20 11:48:04 2024)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=263 (Good luck!)
+IP ID Sequence Generation: Incremental
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 2s, deviation: 0s, median: 2s
+
+TRACEROUTE (using port 3389/tcp)
+HOP RTT       ADDRESS
+1   173.53 ms 10.8.0.1
+2   173.58 ms 10.10.229.120
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Feb 20 11:50:59 2024 -- 1 IP address (1 host up) scanned in 37.76 seconds

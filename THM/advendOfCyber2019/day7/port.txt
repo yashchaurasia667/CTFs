@@ -1,0 +1,46 @@
+# Nmap 7.94SVN scan initiated Mon Feb 19 06:24:22 2024 as: nmap -sSCV -p 1-1001 -Pn -T4 -A -oN port.txt 10.10.59.79
+Nmap scan report for 10.10.59.79
+Host is up (0.17s latency).
+Not shown: 998 closed tcp ports (reset)
+PORT    STATE SERVICE VERSION
+22/tcp  open  ssh     OpenSSH 7.4 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 0e:06:6a:29:89:fe:7c:70:e5:79:3a:1c:26:0e:42:ec (RSA)
+|   256 e6:64:35:80:54:0e:d2:62:59:4b:2b:e9:c1:d2:4b:1e (ECDSA)
+|_  256 03:20:19:71:1c:cf:f1:23:16:a4:a1:2f:e8:6e:2b:42 (ED25519)
+111/tcp open  rpcbind 2-4 (RPC #100000)
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2,3,4        111/tcp   rpcbind
+|   100000  2,3,4        111/udp   rpcbind
+|   100000  3,4          111/tcp6  rpcbind
+|   100000  3,4          111/udp6  rpcbind
+|   100024  1          44286/udp   status
+|   100024  1          53063/tcp   status
+|   100024  1          58416/udp6  status
+|_  100024  1          60787/tcp6  status
+999/tcp open  http    SimpleHTTPServer 0.6 (Python 3.6.8)
+|_http-server-header: SimpleHTTP/0.6 Python/3.6.8
+|_http-title: Directory listing for /
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.94SVN%E=4%D=2/19%OT=22%CT=1%CU=31173%PV=Y%DS=2%DC=T%G=Y%TM=65D3
+OS:3A8A%P=x86_64-pc-linux-gnu)SEQ(SP=102%GCD=1%ISR=10F%TI=Z%CI=Z%TS=A)SEQ(S
+OS:P=102%GCD=1%ISR=10F%TI=Z%CI=Z%II=I%TS=A)OPS(O1=M508ST11NW6%O2=M508ST11NW
+OS:6%O3=M508NNT11NW6%O4=M508ST11NW6%O5=M508ST11NW6%O6=M508ST11)WIN(W1=68DF%
+OS:W2=68DF%W3=68DF%W4=68DF%W5=68DF%W6=68DF)ECN(R=Y%DF=Y%T=FF%W=6903%O=M508N
+OS:NSNW6%CC=Y%Q=)T1(R=Y%DF=Y%T=FF%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=
+OS:Y%DF=Y%T=FF%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=FF%W=0%S=Z%A=S+%F=A
+OS:R%O=%RD=0%Q=)T6(R=Y%DF=Y%T=FF%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=F
+OS:F%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=FF%IPL=164%UN=0%RIPL=G%RID=
+OS:G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=FF%CD=S)
+
+Network Distance: 2 hops
+
+TRACEROUTE (using port 443/tcp)
+HOP RTT       ADDRESS
+1   167.28 ms 10.8.0.1
+2   164.50 ms 10.10.59.79
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Feb 19 06:24:58 2024 -- 1 IP address (1 host up) scanned in 35.83 seconds

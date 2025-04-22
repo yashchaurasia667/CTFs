@@ -1,0 +1,41 @@
+# Nmap 7.94SVN scan initiated Sat Feb 17 13:03:49 2024 as: nmap -sSCV -Pn -T4 -A -oN service.txt 10.10.50.239
+Increasing send delay for 10.10.50.239 from 0 to 5 due to 67 out of 166 dropped probes since last increase.
+Nmap scan report for 10.10.50.239
+Host is up (0.19s latency).
+Scanned at 2024-02-17 13:03:49 EST for 34s
+Not shown: 999 closed tcp ports (reset)
+PORT    STATE SERVICE VERSION
+111/tcp open  rpcbind 2-4 (RPC #100000)
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2,3,4        111/tcp   rpcbind
+|   100000  2,3,4        111/udp   rpcbind
+|   100000  3,4          111/tcp6  rpcbind
+|_  100000  3,4          111/udp6  rpcbind
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.94SVN%E=4%D=2/17%OT=111%CT=1%CU=43642%PV=Y%DS=2%DC=T%G=Y%TM=65D
+OS:0F527%P=x86_64-pc-linux-gnu)SEQ(SP=105%GCD=1%ISR=108%TI=Z%CI=Z%TS=D)SEQ(
+OS:SP=105%GCD=1%ISR=108%TI=Z%CI=Z%II=I%TS=A)SEQ(SP=105%GCD=1%ISR=108%TI=Z%C
+OS:I=Z%II=I%TS=C)SEQ(SP=105%GCD=2%ISR=108%TI=Z%CI=Z%II=I%TS=C)OPS(O1=M508ST
+OS:11NW6%O2=M508ST11NW6%O3=M508NNT11NW6%O4=M508ST11NW6%O5=M508ST11NW6%O6=M5
+OS:08ST11)WIN(W1=68DF%W2=68DF%W3=68DF%W4=68DF%W5=68DF%W6=68DF)ECN(R=Y%DF=Y%
+OS:T=FF%W=6903%O=M508NNSNW6%CC=Y%Q=)T1(R=Y%DF=Y%T=FF%S=O%A=S+%F=AS%RD=0%Q=)
+OS:T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=FF%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=
+OS:FF%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=FF%W=0%S=A%A=Z%F=R%O=%RD=0
+OS:%Q=)T7(R=Y%DF=Y%T=FF%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=FF%IPL=1
+OS:64%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=FF%CD=S)
+
+Uptime guess: 27.388 days (since Sun Jan 21 03:46:16 2024)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=261 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+TRACEROUTE (using port 3306/tcp)
+HOP RTT       ADDRESS
+1   183.69 ms 10.8.0.1
+2   183.90 ms 10.10.50.239
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Feb 17 13:04:23 2024 -- 1 IP address (1 host up) scanned in 33.72 seconds

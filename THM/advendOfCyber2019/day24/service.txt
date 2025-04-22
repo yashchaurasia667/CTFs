@@ -1,0 +1,65 @@
+# Nmap 7.94SVN scan initiated Wed Feb 28 11:53:59 2024 as: nmap -sSCV -A -T4 -Pn -oN service.txt -vvv 10.10.36.8
+Nmap scan report for 10.10.36.8
+Host is up, received user-set (0.17s latency).
+Scanned at 2024-02-28 11:53:59 EST for 30s
+Not shown: 996 closed tcp ports (reset)
+PORT     STATE SERVICE REASON          VERSION
+22/tcp   open  ssh     syn-ack ttl 254 OpenSSH 7.4 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 0a:ee:6d:36:10:72:ce:f0:ef:40:9e:63:52:a9:86:44 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDDQhzfX1LIkI2dQMU7g2KVbviUjMAUdu2McGy//dcj0hrCeK+GO5m5UQB7M8AAVEJAFp8D3AuT9+5j1bbbhoNGCRwllDhlS50+KMtCipMLVF8QqHb6XL9abhMyTgWHhTbC9D6GzF5foVoUb8sZBPcguXjxQ973j4CrlAS5v2/7nIT7GapEiaoAvJLs8H7XbOsDTeAdyLFr8R+OuZ7lBuZA3e9VZaCdoJoIHK0n/TyMAt2J8hRAgSftbDELDnAsWVm4gdabZgu3aNiSIP69EWQKnpFlEX6jEjjAVgW66iXicqe+P6B1HKDzA73iSZOEYeUI85iA/rdUcNaMY3spIrwj
+|   256 11:6e:8f:7f:15:66:e3:03:b1:c4:55:f8:e7:bb:59:23 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBKoK85UZiz0IoEw2eIiVvl746zfPcW4tJH4CfLNTv9HbSgFqNnessk+kInk98Ts9w6olUanJN5JO8v+sFHVteew=
+|   256 b3:12:7a:7f:ac:89:72:c9:25:88:96:20:ad:c7:5b:4a (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPHZvdmlsgFcY4iQM5ATd9THlDW4EE7uc6xR8neoOEBB
+111/tcp  open  rpcbind syn-ack ttl 254 2-4 (RPC #100000)
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2,3,4        111/tcp   rpcbind
+|   100000  2,3,4        111/udp   rpcbind
+|   100000  3,4          111/tcp6  rpcbind
+|_  100000  3,4          111/udp6  rpcbind
+8000/tcp open  http    syn-ack ttl 254 SimpleHTTPServer 0.6 (Python 3.7.4)
+| http-methods: 
+|_  Supported Methods: GET HEAD
+|_http-title: Directory listing for /
+|_http-server-header: SimpleHTTP/0.6 Python/3.7.4
+9200/tcp open  http    syn-ack ttl 254 Elasticsearch REST API 6.4.2 (name: sn6hfBl; cluster: elasticsearch; Lucene 7.4.0)
+| http-methods: 
+|   Supported Methods: DELETE HEAD GET OPTIONS
+|_  Potentially risky methods: DELETE
+|_http-title: Site doesn't have a title (application/json; charset=UTF-8).
+|_http-favicon: Unknown favicon MD5: 6177BFB75B498E0BB356223ED76FFE43
+OS fingerprint not ideal because: maxTimingRatio (1.552000e+00) is greater than 1.4
+Aggressive OS guesses: Linux 3.1 (91%), Linux 3.2 (91%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (91%), Linux 3.10 - 3.13 (90%), Lexmark C534dn printer (89%), ASUS RT-N56U WAP (Linux 3.4) (89%), Linux 3.16 (89%), Adtran 424RG FTTH gateway (89%), Linux 2.6.32 (89%), Linux 2.6.39 - 3.2 (89%)
+No exact OS matches for host (test conditions non-ideal).
+TCP/IP fingerprint:
+SCAN(V=7.94SVN%E=4%D=2/28%OT=22%CT=1%CU=42627%PV=Y%DS=2%DC=T%G=N%TM=65DF6545%P=x86_64-pc-linux-gnu)
+SEQ(SP=108%GCD=1%ISR=10A%TI=Z%CI=Z%II=I%TS=A)
+SEQ(SP=109%GCD=1%ISR=109%TI=Z%CI=Z%II=I%TS=A)
+OPS(O1=M508ST11NW7%O2=M508ST11NW7%O3=M508NNT11NW7%O4=M508ST11NW7%O5=M508ST11NW7%O6=M508ST11)
+WIN(W1=68DF%W2=68DF%W3=68DF%W4=68DF%W5=68DF%W6=68DF)
+ECN(R=Y%DF=Y%T=FF%W=6903%O=M508NNSNW7%CC=Y%Q=)
+T1(R=Y%DF=Y%T=FF%S=O%A=S+%F=AS%RD=0%Q=)
+T2(R=N)
+T3(R=N)
+T4(R=Y%DF=Y%T=FF%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)
+T5(R=Y%DF=Y%T=FF%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+T6(R=Y%DF=Y%T=FF%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)
+T7(R=Y%DF=Y%T=FF%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+U1(R=Y%DF=N%T=FF%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)
+IE(R=Y%DFI=N%T=FF%CD=S)
+
+Uptime guess: 1.653 days (since Mon Feb 26 20:13:36 2024)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=264 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+TRACEROUTE (using port 110/tcp)
+HOP RTT       ADDRESS
+1   167.96 ms 10.8.0.1
+2   169.61 ms 10.10.36.8
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Feb 28 11:54:29 2024 -- 1 IP address (1 host up) scanned in 29.81 seconds

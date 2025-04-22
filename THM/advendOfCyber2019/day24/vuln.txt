@@ -1,0 +1,7 @@
+# Nmap 7.94SVN scan initiated Wed Feb 28 12:10:37 2024 as: nmap -A -p 22,111,5601,8000,9200,9300 --script=vuln -oN vuln.txt 10.10.36.8
+Pre-scan script results:
+| broadcast-avahi-dos: 
+|   Discovered hosts:
+|     224.0.0.251
+|   After NULL UDP avahi packet DoS (CVE-2011-1002).
+|_  Hosts are all up (not vulnerable).

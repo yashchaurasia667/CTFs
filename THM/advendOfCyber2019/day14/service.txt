@@ -1,0 +1,43 @@
+# Nmap 7.94SVN scan initiated Thu Feb 22 05:51:33 2024 as: nmap -sSCV -A -T4 -Pn -oN service.txt -vvv 10.10.210.174
+Nmap scan report for 10.10.210.174
+Host is up, received user-set (0.19s latency).
+Scanned at 2024-02-22 05:51:33 EST for 49s
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE SERVICE REASON         VERSION
+22/tcp open  ssh     syn-ack ttl 63 OpenSSH 7.2p2 Ubuntu 4ubuntu2.8 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 5c:e4:32:33:df:73:e0:30:bb:15:ba:91:57:60:50:d9 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCeYpwzos7q0cRdy62Qv3LSINTgwFhnv5sV2Qc+fukeES7/yy0B4id4GXJXJi6/M1d81xPG5FU1VdpfFWqrXnRy/8hqeEfuoNFxmNEw/59rU9kGr33dfHE6c9ED1Z//KHxzt1ER8MOF5V7pQm7tt1d2KfsjPPen39kJO6pthy/ffBJxuQfTuZWkYC475WIwEZNPQOo5dVffhDcq70Vc8wO/tjJF4zGsMpV1neRtG8G6hnUr1tNuyd38kS23NOL7xQCZnlZ8dIAbbz5v+2TpE8S/EC5hn5PLsgHywtdP/UPU/JUsEZID0hTOIPDKEqes0oM3LXPaLzzrZVda9YFWCVEP
+|   256 cd:a5:f1:73:8a:3c:ad:97:fe:61:13:dd:42:3d:66:1b (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBDq5/XfwOTCAvxIqitSoQUgos6JnIZ5yPKXxZlNf/zcorRYhrwFen8aWmvXAlzwCM/STqRChbhsKFDz9s3NgXNo=
+|   256 f3:73:0b:4e:01:1b:af:27:ca:7c:2e:53:56:82:90:72 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILkXrMCsCzj5/XBvWHjm+BoezX7cUrncSypcZuJIp9Lb
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.94SVN%E=4%D=2/22%OT=22%CT=1%CU=38162%PV=Y%DS=2%DC=T%G=Y%TM=65D7
+OS:2766%P=x86_64-pc-linux-gnu)SEQ(SP=103%GCD=1%ISR=107%TI=Z%II=I%TS=A)SEQ(S
+OS:P=104%GCD=1%ISR=108%TI=Z%II=I%TS=8)SEQ(SP=104%GCD=1%ISR=108%TI=Z%CI=I%TS
+OS:=A)SEQ(SP=104%GCD=1%ISR=108%TI=Z%CI=I%II=I%TS=8)SEQ(SP=105%GCD=2%ISR=107
+OS:%TI=Z%CI=RD%TS=A)OPS(O1=M508ST11NW6%O2=M508ST11NW6%O3=M508NNT11NW6%O4=M5
+OS:08ST11NW6%O5=M508ST11NW6%O6=M508ST11)WIN(W1=68DF%W2=68DF%W3=68DF%W4=68DF
+OS:%W5=68DF%W6=68DF)ECN(R=Y%DF=Y%T=40%W=6903%O=M508NNSNW6%CC=Y%Q=)T1(R=Y%DF
+OS:=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z
+OS:%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=
+OS:Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=O%F=AR%O=%R
+OS:D=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IP
+OS:L=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Uptime guess: 49.710 days (since Wed Jan  3 12:50:03 2024)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=260 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 1720/tcp)
+HOP RTT       ADDRESS
+1   161.80 ms 10.8.0.1
+2   167.97 ms 10.10.210.174
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Feb 22 05:52:22 2024 -- 1 IP address (1 host up) scanned in 49.43 seconds

@@ -1,0 +1,103 @@
+# Nmap 7.94SVN scan initiated Tue Apr 16 11:56:35 2024 as: nmap -sSV -T4 -Pn -A -oN service.txt 10.150.150.66
+Nmap scan report for 10.150.150.66
+Host is up (0.18s latency).
+Scanned at 2024-04-16 11:56:35 EDT for 83s
+Not shown: 988 filtered tcp ports (no-response)
+PORT     STATE SERVICE       VERSION
+53/tcp   open  domain        Simple DNS Plus
+88/tcp   open  kerberos-sec  Microsoft Windows Kerberos (server time: 2024-04-16 15:56:52Z)
+135/tcp  open  msrpc         Microsoft Windows RPC
+139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
+389/tcp  open  ldap          Microsoft Windows Active Directory LDAP (Domain: DOOMOPS.LOCAL0., Site: Default-First-Site-Name)
+445/tcp  open  microsoft-ds?
+464/tcp  open  kpasswd5?
+593/tcp  open  ncacn_http    Microsoft Windows RPC over HTTP 1.0
+636/tcp  open  tcpwrapped
+3268/tcp open  ldap          Microsoft Windows Active Directory LDAP (Domain: DOOMOPS.LOCAL0., Site: Default-First-Site-Name)
+3269/tcp open  tcpwrapped
+3389/tcp open  ms-wbt-server Microsoft Terminal Services
+| ssl-cert: Subject: commonName=DC-DOOMOPS.DOOMOPS.LOCAL
+| Issuer: commonName=DC-DOOMOPS.DOOMOPS.LOCAL
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2024-04-15T13:11:38
+| Not valid after:  2024-10-15T13:11:38
+| MD5:   06a6:0b9a:3504:d6bc:7231:1d76:0b1d:0ed1
+| SHA-1: eac0:b01c:33f0:fc72:3770:9730:0638:9bec:0718:fa53
+| -----BEGIN CERTIFICATE-----
+| MIIC9DCCAdygAwIBAgIQcGbpz34TZ6lOi5h0AInkkDANBgkqhkiG9w0BAQsFADAj
+| MSEwHwYDVQQDExhEQy1ET09NT1BTLkRPT01PUFMuTE9DQUwwHhcNMjQwNDE1MTMx
+| MTM4WhcNMjQxMDE1MTMxMTM4WjAjMSEwHwYDVQQDExhEQy1ET09NT1BTLkRPT01P
+| UFMuTE9DQUwwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDa+apHUsaw
+| OkEDo+fNYxIyGBUDFiq5PMoz4uTZYF4+Pb71l6+Sk+nurmJkzTntiXN8nVL6e/qu
+| VAtbgYR8lZOcASb538ew83tI7U+kBk23CmzHQ3oL+IXkyXjcSPsM1fjIV9vxD6xx
+| YZRW8FfF69sohsZZmLpCJc8Hmm3CmBSQE+f+xU+0Ai2P5SKxq1f2ZNWbKVq0Dy/m
+| uPMdlhhz87adYv4yVkSRL9FdpkFGgpkKY0zw/EofW2/ayY/Xh797OBL24M0hB0T3
+| x0SCKgOb/Y44RD7lRESLfmZhSNAQbJN2scZWhevlyf5btQDFDGq92TUGimDCIeok
+| DLHr9AlT6NcpAgMBAAGjJDAiMBMGA1UdJQQMMAoGCCsGAQUFBwMBMAsGA1UdDwQE
+| AwIEMDANBgkqhkiG9w0BAQsFAAOCAQEAZfnTflcisOM+ALNGR6hPke48maD6X+Ci
+| y14D7TsDQWu+jiN5DFkdKSX6bxuwa/QTm2QSeUjozjWSpROxH9+sjnu/M10+ysIZ
+| g6Ww9NgiHyunHN7uNUHwnLEjDQw51GO2mHbF8stxpC7zaxJn66jw0fPm5+MPKTg7
+| qolO6umnmfkhgHPPpkGHQ1je/SLuRPriQeQKrNZ7Jm4XCVPPeMaxZHbPu3rofJxB
+| Uui5KnuTOKrOgZfAbGp8cFNiuB7HqAyRp+S6UyZHrJFl/lWHivY8SHqSduak1cyD
+| n88uOFspMGK7Fub+eMc0rob7ZEBhwx/BcCDpFH7Fj24oR2lcH4L8WQ==
+|_-----END CERTIFICATE-----
+| rdp-ntlm-info: 
+|   Target_Name: DOOMOPS
+|   NetBIOS_Domain_Name: DOOMOPS
+|   NetBIOS_Computer_Name: DC-DOOMOPS
+|   DNS_Domain_Name: DOOMOPS.LOCAL
+|   DNS_Computer_Name: DC-DOOMOPS.DOOMOPS.LOCAL
+|   DNS_Tree_Name: DOOMOPS.LOCAL
+|   Product_Version: 10.0.17763
+|_  System_Time: 2024-04-16T15:57:15+00:00
+|_ssl-date: 2024-04-16T15:57:54+00:00; +1s from scanner time.
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose
+Running (JUST GUESSING): Microsoft Windows 2019 (89%)
+OS fingerprint not ideal because: Missing a closed TCP port so results incomplete
+Aggressive OS guesses: Microsoft Windows Server 2019 (89%)
+No exact OS matches for host (test conditions non-ideal).
+TCP/IP fingerprint:
+SCAN(V=7.94SVN%E=4%D=4/16%OT=53%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=661EA006%P=x86_64-pc-linux-gnu)
+SEQ(SP=101%GCD=1%ISR=10D%TI=I%II=I%SS=S%TS=U)
+OPS(O1=M508NW8NNS%O2=M508NW8NNS%O3=M508NW8%O4=M508NW8NNS%O5=M508NW8NNS%O6=M508NNS)
+WIN(W1=FFFF%W2=FFFF%W3=FFFF%W4=FFFF%W5=FFFF%W6=FF70)
+ECN(R=Y%DF=Y%TG=80%W=FFFF%O=M508NW8NNS%CC=Y%Q=)
+T1(R=Y%DF=Y%TG=80%S=O%A=S+%F=AS%RD=0%Q=)
+T2(R=N)
+T3(R=N)
+T4(R=N)
+U1(R=N)
+IE(R=Y%DFI=N%TG=80%CD=Z)
+
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=257 (Good luck!)
+IP ID Sequence Generation: Incremental
+Service Info: Host: DC-DOOMOPS; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-time: 
+|   date: 2024-04-16T15:57:17
+|_  start_date: N/A
+|_clock-skew: mean: 0s, deviation: 0s, median: 0s
+| smb2-security-mode: 
+|   3:1:1: 
+|_    Message signing enabled and required
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 59087/tcp): CLEAN (Timeout)
+|   Check 2 (port 26721/tcp): CLEAN (Timeout)
+|   Check 3 (port 55359/udp): CLEAN (Timeout)
+|   Check 4 (port 57035/udp): CLEAN (Timeout)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+
+TRACEROUTE (using port 3389/tcp)
+HOP RTT       ADDRESS
+1   181.06 ms 10.66.66.1
+2   184.37 ms 10.150.150.66
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Apr 16 11:57:58 2024 -- 1 IP address (1 host up) scanned in 83.96 seconds
